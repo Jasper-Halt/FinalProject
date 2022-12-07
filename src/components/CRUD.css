@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {                      /*sets gray background to the larger page and header */
+  background: rgb(192,192,192);
+}
+
+.btn-custom {
+  font-size: 18px;
+  padding-left: 2em;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 80%;
+  min-height: 800px;
+  background: gray;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 28px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+.todo-input::placeholder {                /*sets color and font size of placeholder text*/
+  color: rgba(255, 255, 255, 0.842);
+  font-size: 18px;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(        /*creates gradient effect on button background*/
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  font-size: 16px;                      /*sets font size*/
+  font-weight: 550;                     /*makes button font bold*/
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(          /*sets background for "Edit" button, with gradient effect*/
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+  font-size: 16px;                    /*sets font size*/
+  font-weight: 550;                   /*makes button font bold*/
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;   /*creates space separation between list items and "Delete/Edit" icons.*/
+  align-items: center;
+  margin: 4px auto;
+  color: white;                 /*sets color of list items to white.*/
+  font-size: 20px;                /*sets font size of list items.*/
+  background: black;            /*sets background color to black (both white and yellow/red icons pop well against black*/
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;                   /*sets amount of screen used (looks better at 90% than 100%, while still allowing plenty of space for text).*/
+}
+
+.icons {
+  font-size: 28px;        /*sets size of "Delete" and "Edit" icons*/
+  cursor: pointer;        /*creates a pointer when cursor hovers over those buttons*/
+}
+
+.edit-icon {
+  margin-right: 15px;     /*separates the "delete" and "edit" icons.*/
+  color: yellow;        /*sets yellow (warning!) color for "edit" icon*/
+}
+
+.delete-icon {
+  margin-left: 15px;      /*separates the "delete" and "edit" icons.*/
+  color: red;           /*sets red (danger!) color for delete icon.*/
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+h5 {
+  margin-left: 5em;
+}
